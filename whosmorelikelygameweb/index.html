@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's More Likely Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Who's More Likely Game</h1>
+
+        <!-- Setup Section -->
+        <div id="setup">
+            <label>Number of Players (min 4):</label>
+            <input type="number" id="numberOfPlayers" min="4">
+            <label>Votes Needed to Reveal:</label>
+            <input type="number" id="numberOfVotes" min="1">
+            <button onclick="startSetup()">Next</button>
+        </div>
+
+        <!-- Player Names Section -->
+        <div id="playerNames" style="display: none;">
+            <h2>Enter Player Names</h2>
+            <div id="playerInputs"></div>
+            <button onclick="nextToQuestions()">Next</button>
+        </div>
+
+        <!-- Player Question Input Section -->
+        <div id="playerQuestionInput" style="display: none;">
+            <h2 id="playerQuestionPrompt"></h2>
+            <div id="individualQuestions"></div>
+            <button onclick="savePlayerQuestions()">Submit</button>
+        </div>
+
+        <!-- Game Area Section -->
+        <div id="gameArea" style="display: none;">
+            <h2 id="questionDisplay"></h2>
+            <div id="voteArea"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" style="display: none;">
+            <h2 id="resultDisplay"></h2>
+            <button onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
